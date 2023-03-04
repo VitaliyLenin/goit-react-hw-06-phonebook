@@ -38,11 +38,11 @@ const MyContactForm = ({ onSubmit }) => {
     }
 
     dispatch(addContact({ name, number }));
+    setState({ ...initialState });
   };
 
   const handleSubmit = e => {
     e.preventDefault();
-    setState({ ...initialState });
     onSubmit = handleAddContact({ name, number });
   };
 
